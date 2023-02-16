@@ -4,9 +4,9 @@ import CardContact from "./ContactCard";
  const ContactList =(props)=>{
     console.log(props);
 
-    const renderContactList = props.contacts.map((contact)=>{
+    const renderContactList = props.contacts.map((contact, index)=>{
         return(
-            < CardContact contact={contact}></CardContact>
+            < CardContact contact={contact} key={index}></CardContact>
         );
     });
     return(
